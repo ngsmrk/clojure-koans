@@ -13,6 +13,7 @@
        (let [not-nil? (complement nil?)]
          (filter not-nil? [nil :wheat nil "wheat" nil 'wheat nil])))
 
+;; TODO spend more time looking at these!!
   "Partial functions allow procrastination"
   (= 20 (let [multiply-by-5 (partial * 5)]
           (multiply-by-5 4)))
@@ -22,6 +23,7 @@
        (let [ab-adder (partial concat [:a :b])]
          (ab-adder [:a :b])))
 
+;; TODO spend more time looking at these!!
   "Functions can join forces as one 'composed' function"
   (= 25 (let [inc-and-square (comp square inc)]
           (inc-and-square 4)))
