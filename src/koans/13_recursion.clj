@@ -23,11 +23,12 @@
   )
 
 (defn factorial [n]
-                     (loop [i n acc 1] ;; i is the accumulated value
-                       (if (zero? i)
-                         acc
+                     (loop [initial_value n output 1]
+                       (if (zero? initial_value)
+                         output
                         (
-                          recur (dec i) (* acc i)
+                          recur (dec initial_value) (* output initial_value)
+                          ;; (dec initial_value) is bound to i, (* output initial_value) is bound to output
                         )
                        )
                      )
