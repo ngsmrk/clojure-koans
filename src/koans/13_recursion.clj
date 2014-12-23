@@ -23,11 +23,11 @@
   )
 
 (defn factorial [n]
-                     (loop [n n acc 1]
-                       (if (zero? n)
+                     (loop [i n acc 1] ;; i is the accumulated value
+                       (if (zero? i)
                          acc
                         (
-                          recur (dec n) (* acc n)
+                          recur (dec i) (* acc i)
                         )
                        )
                      )
